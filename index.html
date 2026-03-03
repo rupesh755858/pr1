@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Funngro – Company | Teen Talent & Learning Platform</title>
+
+<meta name="description" content="Funngro connects companies with young teen talent for real paid projects. Build skills, gain experience and empower the future workforce.">
+<meta name="keywords" content="Funngro company, teen talent platform, youth freelance, projects for teenagers, teen earning platform">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:#f7f9ff;color:#1c1c1c;overflow-x:hidden;}
+
+a{text-decoration:none;color:inherit}
+
+header{
+  position:sticky;top:0;z-index:99;
+  background:#0052cc;color:#fff;
+}
+nav{
+  max-width:1200px;margin:auto;
+  padding:14px 20px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.logo{font-size:26px;font-weight:700}
+nav a{margin-left:20px;font-weight:600}
+.active-link{color:#ffd60a}
+
+/* hero */
+.hero{
+  padding:120px 20px 80px;
+  background:#ffffff;
+  text-align:center;
+}
+.hero h1{font-size:3rem;color:#0052cc}
+.hero p{max-width:750px;margin:16px auto 26px;color:#444;font-size:1.1rem}
+.btn{
+  display:inline-block;
+  padding:14px 34px;
+  background:#0052cc;
+  color:#fff;border-radius:30px;
+  font-weight:600;
+  position:relative;
+  overflow:hidden;
+  transition:.3s;
+}
+.btn:hover{transform:translateY(-3px);background:#003f9e}
+
+/* sections */
+.section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+.section h2{
+  text-align:center;
+  color:#0052cc;
+  font-size:2.3rem;
+  margin-bottom:18px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+  margin-top:26px;
+}
+
+.card{
+  background:#fff;
+  padding:26px;
+  border-radius:16px;
+  box-shadow:0 8px 28px rgba(0,0,0,.08);
+  transition:.4s;
+}
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 14px 40px rgba(0,0,0,.14);
+}
+.card h3{color:#003f9e;margin-bottom:8px}
+
+/* reveal animation */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* counters */
+.counter{
+  text-align:center;
+  font-size:2.2rem;
+  font-weight:700;
+  color:#0052cc;
+}
+
+/* CTA pulse */
+.pulse{
+  animation:pulse 1.8s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(0,82,204,.5);}
+  70%{box-shadow:0 0 0 18px rgba(0,82,204,0);}
+  100%{box-shadow:0 0 0 0 rgba(0,82,204,0);}
+}
+
+footer{
+  background:#003f9e;
+  color:#fff;
+  text-align:center;
+  padding:22px;
+  margin-top:60px;
+}
+
+/* responsive */
+@media(max-width:700px){
+  .hero h1{font-size:2.2rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+  <div class="logo">Funngro</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#impact">Impact</a>
+    <a href="#how">How it works</a>
+    <a href="teens.html">For teens</a>
+  </div>
+</nav>
+</header>
+
+<section class="hero reveal" id="home">
+  <h1>Connecting Companies with Young Talent</h1>
+  <p>Funngro helps organizations work with motivated teenagers on real business projects while helping teens earn, learn and build career-ready skills.</p>
+  <a class="btn pulse" href="teens.html">Explore Teen Platform</a>
+</section>
+
+<section class="section reveal" id="about">
+  <h2>About Funngro</h2>
+  <p style="text-align:center;max-width:820px;margin:auto;color:#444">
+    Funngro is a teen talent marketplace where companies can assign practical tasks and projects to young learners and creators in a safe and structured environment.
+  </p>
+
+  <div class="grid">
+    <div class="card reveal">
+      <h3>Verified Teen Talent</h3>
+      <p>Access enthusiastic teenagers who are ready to learn and work on real projects.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Simple Project Management</h3>
+      <p>Post tasks, review submissions and manage work easily from one platform.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Secure Payments</h3>
+      <p>Payments and task tracking handled safely through the platform.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="impact">
+  <h2>Our Impact</h2>
+
+  <div class="grid">
+    <div class="card">
+      <div class="counter"><span class="count" data-target="1200">0</span>+</div>
+      <p style="text-align:center">Projects completed</p>
+    </div>
+    <div class="card">
+      <div class="counter"><span class="count" data-target="50000">0</span>+</div>
+      <p style="text-align:center">Teen users</p>
+    </div>
+    <div class="card">
+      <div class="counter"><span class="count" data-target="300">0</span>+</div>
+      <p style="text-align:center">Partner companies</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="how">
+  <h2>How Companies Use Funngro</h2>
+  <div class="grid">
+    <div class="card reveal">
+      <h3>Post a project</h3>
+      <p>Define your task and required skills.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Get matched</h3>
+      <p>Relevant teen profiles are suggested automatically.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Review work</h3>
+      <p>Check submissions and approve quality work.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Pay & scale</h3>
+      <p>Pay securely and repeat with larger projects.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Funngro Company Platform © 2026
+</footer>
+
+<script>
+// reveal animation
+const revealItems = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('active');
+      revealObserver.unobserve(e.target);
+    }
+  });
+},{threshold:0.15});
+revealItems.forEach(el=>revealObserver.observe(el));
+
+// animated counters
+const counters=document.querySelectorAll('.count');
+const counterObserver=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el=e.target;
+      const target=+el.dataset.target;
+      let value=0;
+      const step=target/80;
+      const run=()=>{
+        value+=step;
+        if(value<target){
+          el.textContent=Math.floor(value);
+          requestAnimationFrame(run);
+        }else{
+          el.textContent=target;
+        }
+      };
+      run();
+      counterObserver.unobserve(el);
+    }
+  });
+},{threshold:0.6});
+counters.forEach(c=>counterObserver.observe(c));
+
+// active menu
+const sections=document.querySelectorAll("section[id]");
+const links=document.querySelectorAll("nav a");
+
+window.addEventListener("scroll",()=>{
+  let y=window.scrollY;
+  sections.forEach(sec=>{
+    const top=sec.offsetTop-120;
+    const h=sec.offsetHeight;
+    const id=sec.getAttribute("id");
+    if(y>=top && y<top+h){
+      links.forEach(l=>{
+        l.classList.remove("active-link");
+        if(l.getAttribute("href")==="#"+id){
+          l.classList.add("active-link");
+        }
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

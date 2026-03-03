@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Funngro for Teens | Earn, Learn & Build Skills</title>
+
+<meta name="description" content="Join Funngro to earn money, gain real company experience and build professional skills as a teenager.">
+<meta name="keywords" content="Funngro teens, earn money for teens, student projects, freelance for teenagers">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,system-ui,sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:#ffffff;color:#1b1b1b;overflow-x:hidden;}
+a{text-decoration:none;color:inherit}
+
+header{
+  background:#0052cc;color:#fff;
+  position:sticky;top:0;z-index:99;
+}
+nav{
+  max-width:1200px;margin:auto;
+  padding:14px 20px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.logo{font-size:26px;font-weight:700}
+nav a{margin-left:20px;font-weight:600}
+.active-link{color:#ffd60a}
+
+.hero{
+  padding:110px 20px 70px;
+  background:#eef4ff;
+  text-align:center;
+}
+.hero h1{font-size:2.8rem;color:#0052cc}
+.hero p{max-width:700px;margin:14px auto 22px;color:#444}
+.btn{
+  display:inline-block;
+  padding:13px 32px;
+  background:#0052cc;color:#fff;
+  border-radius:30px;
+  font-weight:600;
+  transition:.3s;
+}
+.btn:hover{transform:translateY(-3px);background:#003f9e}
+
+.section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+.section h2{
+  text-align:center;
+  font-size:2.2rem;
+  color:#0052cc;
+  margin-bottom:16px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
+  margin-top:24px;
+}
+
+.card{
+  background:#f5f8ff;
+  padding:24px;
+  border-radius:16px;
+  box-shadow:0 8px 28px rgba(0,0,0,.08);
+  transition:.4s;
+}
+.card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 14px 40px rgba(0,0,0,.14);
+}
+.card h3{color:#003f9e;margin-bottom:8px}
+
+/* reveal */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* pulse */
+.pulse{
+  animation:pulse 1.8s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(0,82,204,.5);}
+  70%{box-shadow:0 0 0 18px rgba(0,82,204,0);}
+  100%{box-shadow:0 0 0 0 rgba(0,82,204,0);}
+}
+
+footer{
+  background:#003f9e;color:#fff;
+  text-align:center;padding:22px;margin-top:60px;
+}
+
+@media(max-width:700px){
+  .hero h1{font-size:2.1rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+  <div class="logo">Funngro</div>
+  <div>
+    <a href="company.html">Company</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#steps">How it works</a>
+  </div>
+</nav>
+</header>
+
+<section class="hero reveal" id="home">
+  <h1>Earn Money. Learn Skills. Grow Faster.</h1>
+  <p>Funngro gives teenagers real paid projects from companies so you can build experience before starting your career.</p>
+  <a class="btn pulse" href="#steps">Get started</a>
+</section>
+
+<section class="section reveal" id="benefits">
+  <h2>Why Join Funngro</h2>
+  <div class="grid">
+    <div class="card reveal">
+      <h3>Flexible projects</h3>
+      <p>Work on tasks that match your interests and time.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Earn while studying</h3>
+      <p>Get paid for real work even as a student.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Build your portfolio</h3>
+      <p>Create proof of skills with real company work.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="steps">
+  <h2>How It Works</h2>
+  <div class="grid">
+    <div class="card reveal">
+      <h3>Create profile</h3>
+      <p>Register and complete your teen profile.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Explore projects</h3>
+      <p>Find paid tasks from real companies.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Submit work</h3>
+      <p>Complete tasks and send for review.</p>
+    </div>
+    <div class="card reveal">
+      <h3>Get paid</h3>
+      <p>Receive earnings and grow your experience.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Funngro Teen Platform © 2026
+</footer>
+
+<script>
+// reveal animation
+const revealItems=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('active');
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:0.15});
+revealItems.forEach(el=>observer.observe(el));
+
+// active menu
+const sections=document.querySelectorAll("section[id]");
+const links=document.querySelectorAll("nav a");
+
+window.addEventListener("scroll",()=>{
+  let y=window.scrollY;
+  sections.forEach(sec=>{
+    const top=sec.offsetTop-120;
+    const h=sec.offsetHeight;
+    const id=sec.getAttribute("id");
+    if(y>=top && y<top+h){
+      links.forEach(l=>{
+        l.classList.remove("active-link");
+        if(l.getAttribute("href")==="#"+id){
+          l.classList.add("active-link");
+        }
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
